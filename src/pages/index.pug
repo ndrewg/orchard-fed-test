@@ -1,3 +1,5 @@
-include /layouts/main.pug
+extends /layouts/main.pug
 block content
-  h1 Hello World
+  .content
+    include /components/content-box.pug
+    include /components/articles.pug

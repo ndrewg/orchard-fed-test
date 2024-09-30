@@ -1,0 +1,38 @@
+-
+  const articles = [
+    {
+      image: '/public/images/component-02/Image-01.jpg',
+      alt: 'Man and child walking through a field',
+      title: 'Summer Lunch Menu By Mark Best',
+      text: 'AEG ambassador Mark Best\'s summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home',
+      link: '#'
+    },
+    {
+      image: '/public/images/component-02/Image-02.jpg',
+      alt: 'Man and child walking through a field',
+      title: 'A Traditional Christmas Eve, Mark Best Style',
+      text: 'One of Australia\'s best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.',
+      link: '#'
+    },
+    {
+      image: '/public/images/component-02/Image-03.jpg',
+      alt: 'Man and child walking through a field',
+      title: 'Taking Taste Further',
+      text: 'This exclusive cookbook gives you all the know-how you need. We\'ve designed it to make sure you get the most out of our products – and the best out of your food.',
+      link: '#'
+    }
+  ];
+
+section.articles
+  .articles__content
+    h1.articles__title ALL THE LATEST FROM AEG
+    //- Debug output
+    ul.articles__list
+      each article in articles
+        li.articles__item
+          .articles__item-image-wrapper
+            img.articles__item-image(src=article.image alt=article.alt)
+          .articles__item-content
+            h3.articles__item-title= article.title
+            p.articles__item-text= article.text
+            a.articles__item-button(href=article.link) Read More
